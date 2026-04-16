@@ -21,21 +21,9 @@ pluginManagement {
 }
 
 plugins {
-    id "dev.flutter.flutter-gradle-plugin" version "1.0.0" apply false
+    id "dev.flutter.flutter-gradle-plugin" version "3.41.6" apply false
     id "com.android.application" version "8.1.0" apply false
-    id "kotlin-android" version "1.9.10" apply false
+    id "org.jetbrains.kotlin.android" version "1.9.10" apply false
 }
 
 include ":app"
-
-def localPropertiesFile = new File(rootDir.absolutePath + "/local.properties")
-def properties = new Properties()
-
-if (localPropertiesFile.exists()) {
-    localPropertiesFile.withReader("UTF-8") { reader -> properties.load(reader) }
-}
-
-def flutterSdkPath = properties.getProperty("flutter.sdk")
-if (flutterSdkPath != null) {
-    apply from: "$flutterSdkPath/packages/flutter_tools/gradle/flutter.gradle"
-}

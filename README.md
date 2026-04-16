@@ -48,7 +48,7 @@ A 100% FREE, privacy-first habit and task tracker app with offline-first archite
 # https://flutter.dev/docs/get-started/install
 
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/Streaky.git
+git clone https://github.com/abhishek020405n-afk/Streaky.git
 cd Streaky
 
 # Get dependencies
@@ -124,8 +124,8 @@ Contributions are welcome! Please:
 ## 🐛 Bug Reports & Feedback
 
 Found a bug? Have a feature request?
-- Issues: [GitHub Issues](https://github.com/YOUR_USERNAME/Streaky/issues)
-- Discussions: [GitHub Discussions](https://github.com/YOUR_USERNAME/Streaky/discussions)
+- Issues: [GitHub Issues](https://github.com/abhishek020405n-afk/Streaky/issues)
+- Discussions: [GitHub Discussions](https://github.com/abhishek020405n-afk/Streaky/discussions)
 
 ## 📄 License
 
@@ -133,7 +133,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👤 Author
 
-- **Abhishek Kumar** - [GitHub](https://github.com/YOUR_USERNAME)
+- **Abhishek Kumar** - [GitHub](https://github.com/abhishek020405n-afk)
 
 ## ⭐ Show Your Support
 
