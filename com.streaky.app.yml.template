@@ -1,0 +1,30 @@
+Categories:
+  - Productivity
+License: MIT
+AuthorName: Abhishek Kumar
+WebSite: https://github.com/YOUR_USERNAME/Streaky
+SourceCode: https://github.com/YOUR_USERNAME/Streaky
+IssueTracker: https://github.com/YOUR_USERNAME/Streaky/issues
+
+AutoName: Streaky
+Description: |
+  Streaky is a privacy-focused habit and task tracker with offline-first architecture.
+  
+  Features:
+  • Track habits and daily tasks
+  • Build streaks and monitor progress
+  • Beautiful analytics and charts
+  • Completely private - no tracking, no ads
+  • Works offline - your data stays on your device
+  • Open source with MIT License
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 1
+    commit: v1.0.0
+    gradle:
+      - yes
+    srclibs:
+      - flutter@stable
+    prebuild:
+      - echo 'flutter.sdk=$${flutter.sdk}}' > local.properties

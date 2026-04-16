@@ -1,0 +1,98 @@
+Categories:
+  - System
+
+License: MIT
+
+AuthorName: Your Name Here
+AuthorEmail: your.email@example.com
+
+SourceCode: https://github.com/YOUR_USERNAME/HabitFlow
+IssueTracker: https://github.com/YOUR_USERNAME/HabitFlow/issues
+Changelog: https://github.com/YOUR_USERNAME/HabitFlow/releases
+Donate: https://github.com/YOUR_USERNAME/HabitFlow
+
+Builds:
+  - versionName: '1.0.0'
+    versionCode: 1
+    commit: v1.0.0
+    output: app-release.apk
+    srclibs:
+      - flutter@3.16.0
+    build:
+      - echo 'Preparing Flutter build'
+      - flutter clean
+      - flutter pub get
+      - flutter build apk --release
+    ndk: 23c
+
+CurrentVersionCode: 1
+CurrentVersion: 1.0.0
+
+AllowedAPKSigningKeys:
+  - EXAMPLEFINGERPRINT
+
+Summary: 100% FREE offline habit & task tracker - privacy first
+
+Description: |-
+  HabitFlow is a powerful habit and task tracking app designed with privacy and
+  offline-first principles. Zero tracking, zero ads, zero login required.
+
+  Core Features:
+  • Complete habit and task management system
+  • Daily, weekly, monthly, and custom repeat schedules
+  • Rich task notes and 10 habit categories
+  • Real-time streak tracking system
+
+  Analytics & Insights:
+  • Beautiful line charts and bar graphs
+  • Calendar heatmap view (GitHub style)
+  • Weekly and monthly completion reports
+  • Real-time progress tracking
+
+  Gamification:
+  • XP points system for habit completions
+  • Level progression with visual milestones
+  • Achievement badges and challenges
+  • Daily motivation challenges
+
+  Notifications & Reminders:
+  • Local push notifications (no backend)
+  • Custom reminder times per habit
+  • Daily habit summary notifications
+  • Completely offline notification system
+
+  Data Management:
+  • Backup habits as JSON files
+  • Import/restore from backups
+  • Drag-and-drop habit reordering
+  • Complete data portability
+
+  Privacy Guarantees:
+  • Zero data collection
+  • Zero analytics
+  • Zero ads or tracking
+  • No login or authentication required
+  • No internet connection required
+  • All data encrypted on device
+  • MIT License - 100% open source
+
+  User Experience:
+  • Modern Material 3 design
+  • Dark and light mode support
+  • Smooth animations
+  • Responsive design for all screen sizes
+
+  Technical:
+  • Lightweight (~55-60 MB)
+  • Battery-efficient
+  • 60 FPS smooth performance
+  • Android 5.0+ support
+  • Flutter-based for fast updates
+
+RepoType: git
+Repo: https://github.com/YOUR_USERNAME/HabitFlow.git
+
+Requires Android: 5.0
+
+SuggestedVersionName: 1.0.0
+SuggestedVersionCode: 1

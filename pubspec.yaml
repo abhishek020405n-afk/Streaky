@@ -1,0 +1,81 @@
+name: habit_flow
+description: "HabitFlow is a 100% FREE, privacy-first habit and task tracker app with offline-first architecture."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State Management
+  riverpod: ^2.4.0
+  flutter_riverpod: ^2.4.0
+  hooks_riverpod: ^2.4.0
+
+  # Local Database
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  # Notifications
+  flutter_local_notifications: ^21.0.0
+  timezone: ^0.11.0
+
+  # Charts
+  fl_chart: ^1.2.0
+
+  # Voice Input
+  speech_to_text: ^7.3.0
+  permission_handler: ^12.0.1
+
+  # Date & Time
+  intl: ^0.20.2
+  table_calendar: ^3.2.0
+
+  # Animations & UI
+  flutter_animate: ^4.2.0
+  smooth_page_indicator: ^2.0.1
+
+  # File Handling
+  file_picker: ^11.0.2
+  share_plus: ^12.0.2
+  path_provider: ^2.1.2
+
+  # Serialization
+  json_serializable: ^6.8.0
+  freezed_annotation: ^2.4.1
+  # Utilities
+  uuid: ^4.0.0
+  get_it: ^9.2.1
+  dartz: ^0.10.1
+  equatable: ^2.0.5
+
+  # UI Components
+  cached_network_image: ^3.3.1
+  shimmer: ^3.0.0
+  lottie: ^3.1.0
+  google_mobile_ads: ^2.3.0
+
+  # Settings & Storage
+  shared_preferences: ^2.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.13
+  freezed: ^2.5.2
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/animations/
+

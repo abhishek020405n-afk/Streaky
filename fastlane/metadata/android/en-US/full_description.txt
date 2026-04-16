@@ -1,0 +1,50 @@
+HabitFlow is a 100% FREE, privacy-first habit and task tracker built for those who value their data.
+
+🎯 CORE FEATURES
+• Create, track, and manage daily habits & tasks
+• Support for daily, weekly, monthly, and one-time schedules
+• Build streaks and celebrate milestones (7, 30, 100+ day streaks)
+• Rich task notes and custom categories
+• Voice input for quick habit logging
+
+📊 ANALYTICS & INSIGHTS
+• Beautiful completion charts and progress visualization
+• Weekly and monthly reports
+• Calendar heatmap view (GitHub style)
+• Current and longest streak tracking
+• Completion percentage for each habit
+
+🎮 GAMIFICATION
+• XP points system for completions
+• Achievement badges and milestones
+• Daily challenges to stay motivated
+• Level progression with visual rewards
+
+🔔 SMART REMINDERS
+• Local notifications for habit reminders
+• Custom reminder times for each habit
+• Daily habit summary notifications
+• No cloud dependency - reminders work offline
+
+💾 DATA MANAGEMENT
+• Backup & restore your habits as JSON
+• Import/export data anytime
+• Drag-and-drop reordering
+• Complete data portability
+
+🔐 PRIVACY & SECURITY
+✓ ZERO tracking, analytics, or data collection
+✓ ZERO ads or intrusive features
+✓ ZERO login or user authentication required
+✓ ZERO dependencies on internet or cloud services
+✓ All data stored securely on your device
+✓ Open-source code - audit it yourself
+
+⚡ LIGHTWEIGHT & EFFICIENT
+✓ ~50MB app size
+✓ Battery-friendly and optimized
+✓ Works on Android 5.0+
+✓ Material 3 design for modern experience
+
+Why HabitFlow?
+Your habits are personal. Your data should be too. HabitFlow gives you a powerful habit tracking experience without compromise - no tracking, no ads, no paywalls.

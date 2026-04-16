@@ -1,0 +1,5 @@
+# Gradle settings for Streaky Android app
+org.gradle.jvmargs=-Xmx2048M
+org.gradle.parallel=true
+org.gradle.daemon=true
+org.gradle.configureondemand=true
