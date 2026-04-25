@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../../../core/services/ad_manager.dart';
 import 'analytics_screen.dart';
 import 'challenges_screen.dart';
 import 'dashboard_screen.dart';
@@ -42,12 +41,7 @@ class _AppHomeState extends ConsumerState<AppHome> {
           ),
         ],
       ),
-      body: Column(
-        children: [
-          Expanded(child: _screens[_selectedIndex]),
-          AdManager.bannerAdWidget(),
-        ],
-      ),
+      body: _screens[_selectedIndex],
       bottomNavigationBar: NavigationBar(
         selectedIndex: _selectedIndex,
         onDestinationSelected: (value) => setState(() => _selectedIndex = value),
