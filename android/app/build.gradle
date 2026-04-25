@@ -4,6 +4,12 @@ plugins {
     id "dev.flutter.flutter-gradle-plugin"
 }
 
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
 android {
     namespace "com.streaky.app"
     compileSdkVersion 34
@@ -18,35 +24,21 @@ android {
     }
 
     sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
+        main {
+            // Exclude the legacy generated registrant - Flutter Gradle plugin handles this
+            java.exclude 'io/flutter/plugins/GeneratedPluginRegistrant.java'
+        }
     }
-
-    // Load signing configuration from keystore.properties
-    def keystoreFile = rootProject.file('keystore.properties')
-    def keystoreProperties = new Properties()
-    if (keystoreFile.exists()) {
-        keystoreProperties.load(new FileInputStream(keystoreFile))
-    }
-
     signingConfigs {
         release {
-            if (keystoreProperties['storeFile']) {
-                keyAlias keystoreProperties['keyAlias']
-                keyPassword keystoreProperties['keyPassword']
-                storeFile file(keystoreProperties['storeFile'])
-                storePassword keystoreProperties['storePassword']
-            }
-        }
-        debug {
-            keyAlias keystoreProperties['debugKeyAlias'] ?: 'androiddebugkey'
-            keyPassword keystoreProperties['debugKeyPassword'] ?: 'android'
-            storeFile keystoreProperties['debugStoreFile'] ? file(keystoreProperties['debugStoreFile']) : file(System.getProperty('user.home') + '/.android/debug.keystore')
-            storePassword keystoreProperties['debugStorePassword'] ?: 'android'
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
+            storePassword keystoreProperties['storePassword']
         }
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id).
         applicationId "com.streaky.app"
         minSdkVersion flutter.minSdkVersion
         targetSdkVersion 34
@@ -56,17 +48,17 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled true
-            shrinkResources true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
-        }
-        debug {
-            signingConfig signingConfigs.debug
+            minifyEnabled false
+            shrinkResources false
+            signingConfig keystorePropertiesFile.exists() ? signingConfigs.release : signingConfigs.debug
         }
     }
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.22"
+}
+
+flutter {
+    source '../..'
 }

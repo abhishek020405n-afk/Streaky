@@ -8,13 +8,9 @@ allprojects {
 rootProject.buildDir = "../build"
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
-    project.evaluationDeps(rootProject.childrenDependingOn(project.name))
 }
-
 subprojects {
-    project.afterEvaluate {
-        project.java.toolchain.languageVersion.set(JavaLanguageVersion.of(11))
-    }
+    project.evaluationDependsOn(":app")
 }
 
 tasks.register("clean", Delete) {
