@@ -3,14 +3,26 @@ import '../constants/app_constants.dart';
 import '../../features/habits/data/models/habit_model.dart';
 
 class HiveService {
+  static bool _initialized = false;
+
   static Future<void> init() async {
+    if (_initialized) return;
     await Hive.initFlutter();
-    Hive.registerAdapter(HabitModelAdapter());
-    Hive.registerAdapter(TaskModelAdapter());
+
+    // Register adapters only if not already registered
+    if (!Hive.isAdapterRegistered(HabitModelAdapter().typeId)) {
+      Hive.registerAdapter(HabitModelAdapter());
+    }
+    if (!Hive.isAdapterRegistered(TaskModelAdapter().typeId)) {
+      Hive.registerAdapter(TaskModelAdapter());
+    }
+
     await Future.wait([
       Hive.openBox<HabitModel>(AppConstants.habitsBoxName),
       Hive.openBox(AppConstants.settingsBoxName),
     ]);
+
+    _initialized = true;
   }
 
   static Box<HabitModel> get habitsBox => Hive.box<HabitModel>(AppConstants.habitsBoxName);
